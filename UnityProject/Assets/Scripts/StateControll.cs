@@ -53,4 +53,21 @@ public class StateControll : MonoBehaviour {
 		return true;
 	}
 
+	//Link all partners
+	private void OnDrawGizmos(){
+		for(int i = 0; i < allRecievers.Length; i++){
+			//			allRecievers.
+			Gizmos.color = Color.blue;
+			Gizmos.DrawLine(this.transform.position, allRecievers[i].transform.position);
+		}
+		
+		//Link to Senders
+		for(int ii = 0; ii < allSenders.Length; ii++){
+
+			Gizmos.color = Color.yellow;
+			Gizmos.DrawLine(this.transform.position, allSenders[ii].transform.position);
+			
+		}
+
+	}
 }

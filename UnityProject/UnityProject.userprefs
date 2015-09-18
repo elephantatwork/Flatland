@@ -1,10 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Reciever.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StateControll.cs">
     <Files>
-      <File FileName="Assets/Scripts/Reciever.cs" Line="25" Column="2" />
-      <File FileName="Assets/Debug.cs" Line="6" Column="50" />
-      <File FileName="Assets/Scripts/Sender.cs" Line="33" Column="16" />
+      <File FileName="Assets/Scripts/Reciever.cs" Line="6" Column="1" />
+      <File FileName="Assets/Debug.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sender.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Interactive.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/StateControll.cs" Line="54" Column="3" />
+      <File FileName="Assets/EditorGizmos.cs" Line="16" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
