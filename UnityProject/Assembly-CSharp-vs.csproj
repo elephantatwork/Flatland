@@ -49,7 +49,6 @@
      <Compile Include="Assets\ArrivingWorldIntro.cs" />
      <Compile Include="Assets\BaseAction.cs" />
      <Compile Include="Assets\BlackenerAdjuster.cs" />
-     <Compile Include="Assets\Debug.cs" />
      <Compile Include="Assets\DrawOnePoint.cs" />
      <Compile Include="Assets\EditorGizmos.cs" />
      <Compile Include="Assets\FlickerLight.cs" />
@@ -58,6 +57,7 @@
      <Compile Include="Assets\RotateSimple.cs" />
      <Compile Include="Assets\Scalelevel.cs" />
      <Compile Include="Assets\Scripts\Button.cs" />
+     <Compile Include="Assets\Scripts\Debug.cs" />
      <Compile Include="Assets\Scripts\Interactive.cs" />
      <Compile Include="Assets\Scripts\Moveable.cs" />
      <Compile Include="Assets\Scripts\Reciever.cs" />
