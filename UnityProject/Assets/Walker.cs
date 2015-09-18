@@ -20,14 +20,20 @@ public class Walker : MonoBehaviour {
 
 	private Vector3 moveVector;
 
+	private float pushingSpeedReduction = 0.8F;
+
 	private Transform localTransform;
+	private Rigidbody localRigidbody;
 
 	public ArrivingWorldIntro _linkToINTRO;
+
+	private float pushPower = 2.0F;
 
 	// Use this for initialization
 	void Start () {
 	
 		localTransform = this.transform;
+		localRigidbody = this.GetComponent<Rigidbody>();
 
 		ToggleFast(false);	
 	}
@@ -96,16 +102,27 @@ public class Walker : MonoBehaviour {
 
 	public void OnControllerColliderHit(ControllerColliderHit _hit){
 
-		if(_hit.collider.tag == "Interactable"){
+		Rigidbody _otherBody = _hit.collider.attachedRigidbody;
+		if (_otherBody == null || _otherBody.isKinematic)
+			return;
+		
+		if (_hit.moveDirection.y < -0.3F)
+			return;
+		
+		Vector3 pushDir = new Vector3(_hit.moveDirection.x, 0, _hit.moveDirection.z);
+		_otherBody.velocity = pushDir * currentWalkSpeed * pushingSpeedReduction;
 
-			Rigidbody _body = _hit.collider.attachedRigidbody;
-			if (_body != null && !_body.isKinematic)
-				_body.velocity += this.GetComponent<CharacterController>().velocity*0.1F;
-
-			BaseAction _action = _hit.collider.GetComponent<BaseAction>();
-			if(_action != null)
-				_action.Action();
-
-		}
+//		if(_hit.collider.tag == "Interactable"){
+//
+//			Rigidbody _body = _hit.collider.attachedRigidbody;
+//			if (_body != null && !_body.isKinematic)
+//				_body.velocity += this.GetComponent<CharacterController>().velocity*0.1F;
+//
+//			BaseAction _action = _hit.collider.GetComponent<BaseAction>();
+//			if(_action != null)
+//				_action.Action();
+//
+//		}
 	}
+
 }
